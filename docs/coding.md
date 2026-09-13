@@ -34,7 +34,8 @@ Read this when changing implementation, templates, styles, or dependencies.
   single layout wrapper.
 - Use shared layouts for repeated HTML.
 - Use semantic HTML, accessible focus states, and responsive layouts.
-- Use Eleventy URL filters for links and assets so GitHub Pages prefixes work.
+- Use Eleventy URL filters for links and assets so root-relative URLs stay
+  consistent across local development and the custom domain.
 - Keep private guidance, credentials, and local-only files out of source and output.
 - Do not add browser JavaScript, external services, or dependencies without a
   clear reason.
