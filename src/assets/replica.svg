@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="white">
+    <rect x="56" y="117" width="184" height="126"/><rect x="400" y="117" width="184" height="126"/>
+    <path d="M240 180H394" stroke-dasharray="7 7"/><path d="m384 174 10 6-10 6" fill="none"/>
+    <rect x="77" y="165" width="142" height="54" fill="#fde68a"/>
+  </g>
+  <g font-family="monospace" font-size="18" fill="#431407" text-anchor="middle">
+    <text x="148" y="146">PRIMARY</text><text x="492" y="146">REPLICA</text>
+    <text x="148" y="199" font-size="26">Sam</text><text x="492" y="199" font-size="26">Alex</text>
+    <text x="320" y="280">NOT APPLIED YET</text>
+  </g>
+</svg>

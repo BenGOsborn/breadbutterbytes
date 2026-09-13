@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<article class="reading-width py-12 md:py-16">
+  <a class="text-link font-mono text-small" href="{{ '/' | url }}"><span aria-hidden="true">&#8592;</span> All articles</a>
+  <header class="article-heading">
+    <p class="eyebrow">{{ topic }}</p>
+    <h1 class="font-display text-article font-black text-heading mt-5">{{ title }}</h1>
+    <p class="text-lead mt-5">{{ description }}</p>
+    <p class="font-mono text-small mt-6">{{ site.author }} <span aria-hidden="true">/</span> <time datetime="{{ page.date | isoDate }}">{{ page.date | postDate }}</time></p>
+  </header>
+  <div class="prose">{{ content | safe }}</div>
+  {% set relatedArticles = related | relatedArticles(collections.articles) %}
+  {% if relatedArticles.length %}
+  <section class="related-articles" aria-labelledby="related-heading">
+    <h2 id="related-heading" class="font-mono text-small font-bold">Keep reading</h2>
+    <div class="related-grid">
+      {% for relatedArticle in relatedArticles %}
+      <a class="related-link" href="{{ relatedArticle.url | url }}">
+        <span class="eyebrow">{{ relatedArticle.data.topic }}</span>
+        <strong class="font-display text-xl font-bold text-heading">{{ relatedArticle.data.title }}</strong>
+        <span class="text-body">{{ relatedArticle.data.description }}</span>
+        <span class="related-arrow" aria-hidden="true">&#8599;</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  <footer class="article-footer">
+    {% if site.linkedin %}<p class="mb-5">Working through a similar question? <a class="text-link" href="{{ site.linkedin }}">Talk to Ben on LinkedIn <span aria-hidden="true">&#8599;</span></a></p>{% endif %}
+    <a class="text-link font-mono text-small" href="{{ '/' | url }}"><span aria-hidden="true">&#8592;</span> Back to all articles</a>
+  </footer>
+</article>

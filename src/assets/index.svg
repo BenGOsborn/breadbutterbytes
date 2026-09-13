@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="white"/>
+  <g fill="none" stroke="black" stroke-width="2">
+    <path d="M152 180H239M399 180H481"/>
+    <path d="m229 174 10 6-10 6m242-12 10 6-10 6"/>
+    <rect x="40" y="146" width="112" height="68" fill="#fde68a"/>
+    <rect x="239" y="115" width="160" height="130" fill="white"/>
+    <path d="M239 158H399M239 201H399"/>
+    <rect x="481" y="113" width="118" height="134" fill="white"/>
+    <path d="M481 146H599M481 180H599M481 214H599"/>
+    <rect x="481" y="147" width="118" height="33" fill="#fde68a"/>
+  </g>
+  <g font-family="monospace" font-size="19" fill="#431407" text-anchor="middle">
+    <text x="96" y="187">email?</text><text x="319" y="143">A ... F</text><text x="319" y="186">G ... N</text><text x="319" y="229">O ... Z</text>
+    <text x="96" y="285">LOOKUP</text><text x="319" y="285">INDEX</text><text x="540" y="285">ROW</text>
+  </g>
+</svg>

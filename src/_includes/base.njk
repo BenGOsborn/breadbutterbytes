@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description or site.description }}">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='0' y='43' font-size='32'%3E%F0%9F%8D%9E%F0%9F%A7%88%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
+</head>
+<body class="min-h-screen bg-paper font-sans text-ink flex flex-col">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="site-width flex items-center justify-between gap-6" aria-label="Main">
+      <a class="wordmark" href="{{ '/' | url }}" aria-label="Bread Butter Bytes home">bread<span class="text-accent">/</span>butter<span class="text-accent">/</span>bytes<span class="text-accent">.</span></a>
+      <a class="nav-link" href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Articles</a>
+    </nav>
+  </header>
+  <main id="main" class="flex-1" tabindex="-1">{{ content | safe }}</main>
+  <footer class="site-footer site-width flex flex-wrap items-center justify-between gap-4">
+    <p class="font-mono text-small">Bread Butter Bytes <span aria-hidden="true">/</span> {{ site.author }}</p>
+    {% if site.linkedin %}<a class="text-link text-small" href="{{ site.linkedin }}">Get in touch on LinkedIn <span aria-hidden="true">&#8599;</span></a>{% endif %}
+  </footer>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="white"/>
+  <g stroke="black" stroke-width="2" fill="white">
+    <path d="M215 180H307V85H389M307 180H389M307 180V275H389" fill="none"/>
+    <rect x="40" y="149" width="175" height="62" fill="#fde68a"/>
+    <rect x="389" y="54" width="211" height="62"/><rect x="389" y="149" width="211" height="62"/><rect x="389" y="244" width="211" height="62"/>
+  </g>
+  <g font-family="monospace" font-size="20" fill="#431407" text-anchor="middle">
+    <text x="127" y="187">INSERT</text><text x="495" y="92">TABLE</text><text x="495" y="187">EMAIL INDEX</text><text x="495" y="282">DATE INDEX</text>
+  </g>
+</svg>
