@@ -1,6 +1,10 @@
 {
   "name": "Bread Butter Bytes",
+  "url": "https://breadbutterbytes.com",
+  "googleAnalyticsId": "G-MR2L4G57F5",
   "description": "Databases, explained from the inside out.",
   "author": "Ben Osborn",
+  "socialImage": "/assets/index-social.png",
+  "socialImageAlt": "An email lookup goes through an index to a matching table row.",
   "linkedin": "https://www.linkedin.com/in/bengosborn/"
 }

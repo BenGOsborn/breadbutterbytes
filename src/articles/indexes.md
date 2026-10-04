@@ -5,6 +5,8 @@ description: A smaller map can save a lot of searching. But that map has a cost 
 date: 2026-09-13
 topic: Fundamentals
 diagram: /assets/index.svg
+socialImage: /assets/index-social.png
+socialImageAlt: An email lookup goes through an index to a matching table row.
 related:
   - indexes-have-a-write-cost
   - why-replica-reads-can-lag

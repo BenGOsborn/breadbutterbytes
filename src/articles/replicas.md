@@ -5,6 +5,8 @@ description: A successful write and an up-to-date replica are two different thin
 date: 2026-09-12
 topic: Replication
 diagram: /assets/replica.svg
+socialImage: /assets/replica-social.png
+socialImageAlt: The primary has the new value Sam while the replica still has Alex.
 related:
   - why-indexes-speed-up-reads
   - indexes-have-a-write-cost

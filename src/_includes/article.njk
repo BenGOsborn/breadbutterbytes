@@ -7,7 +7,7 @@ layout: base.njk
     <p class="eyebrow">{{ topic }}</p>
     <h1 class="font-display text-article font-black text-heading mt-5">{{ title }}</h1>
     <p class="text-lead mt-5">{{ description }}</p>
-    <p class="font-mono text-small mt-6">{{ site.author }} <span aria-hidden="true">/</span> <time datetime="{{ page.date | isoDate }}">{{ page.date | postDate }}</time></p>
+    <p class="font-mono text-small mt-6">{{ site.author }} <span aria-hidden="true">/</span> <time datetime="{{ page.date | isoDate }}">{{ page.date | postDate }}</time>{% if updated %} <span aria-hidden="true">/</span> Updated <time datetime="{{ updated | isoDate }}">{{ updated | postDate }}</time>{% endif %}</p>
   </header>
   <div class="prose">{{ content | safe }}</div>
   {% set relatedArticles = related | relatedArticles(collections.articles) %}
