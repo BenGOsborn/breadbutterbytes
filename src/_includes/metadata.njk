@@ -1,0 +1,29 @@
+{% set canonicalUrl = page.url | absoluteUrl(site.url) %}
+{% set imageUrl = (socialImage or site.socialImage) | absoluteUrl(site.url) %}
+<link rel="canonical" href="{{ canonicalUrl }}">
+<meta property="og:title" content="{{ (title or site.name) }}">
+<meta property="og:description" content="{{ (description or site.description) }}">
+<meta property="og:type" content="{% if isArticle %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:image" content="{{ imageUrl }}">
+<meta property="og:image:alt" content="{{ (socialImageAlt or site.socialImageAlt) }}">
+{% if isArticle %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ title | jsonLd | safe }},
+  "description": {{ description | jsonLd | safe }},
+  "url": {{ canonicalUrl | jsonLd | safe }},
+  "mainEntityOfPage": {{ canonicalUrl | jsonLd | safe }},
+  "image": {{ imageUrl | jsonLd | safe }},
+  "datePublished": {{ page.date | isoDate | jsonLd | safe }},
+  {% if updated %}"dateModified": {{ updated | isoDate | jsonLd | safe }},{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author | jsonLd | safe }},
+    "url": {{ site.linkedin | jsonLd | safe }}
+  }
+}
+</script>
+{% endif %}

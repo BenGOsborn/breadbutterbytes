@@ -5,6 +5,8 @@ description: A faster lookup adds something else to maintain whenever the data c
 date: 2026-09-11
 topic: Performance
 diagram: /assets/write.svg
+socialImage: /assets/write-social.png
+socialImageAlt: One insert creates work in the table and both indexes.
 related:
   - why-indexes-speed-up-reads
   - why-replica-reads-can-lag

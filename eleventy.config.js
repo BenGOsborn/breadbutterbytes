@@ -1,3 +1,5 @@
+const serialize = require("serialize-javascript");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addWatchTarget("src/styles.css");
@@ -13,6 +15,10 @@ module.exports = function (eleventyConfig) {
     }).format(date)
   );
   eleventyConfig.addFilter("isoDate", (date) => date.toISOString().slice(0, 10));
+  eleventyConfig.addFilter("absoluteUrl", (path, base) => new URL(path, base).href);
+  eleventyConfig.addFilter("jsonLd", (value) =>
+    serialize(value, { isJSON: true })
+  );
   eleventyConfig.addFilter("relatedArticles", (ids, articles) => {
     const byId = new Map(articles.map((article) => [article.data.id, article]));
     return (ids || []).map((id) => byId.get(id)).filter(Boolean).slice(0, 2);

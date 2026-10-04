@@ -22,6 +22,13 @@ Read this when adding, editing, or reviewing an article.
 - Use an asset path from `src/assets/` and useful alt text in image markup.
 - Add up to two relevant article IDs in `related` when useful. Choose real next
   steps or prerequisites; do not add unrelated links just to fill the section.
+- Set `socialImage` to a PNG or JPEG asset and `socialImageAlt` to its description.
+  These supply the sharing preview and article structured data. Export diagram
+  SVGs at 1200 pixels wide for these images; keep the SVGs in article content.
+- Add an unquoted `updated: YYYY-MM-DD` only after a substantive article update.
+  It appears beside the publication date and supplies `dateModified`.
+- Shared templates generate Open Graph tags, canonical URLs, and `BlogPosting`
+  data. Keep the production origin in `src/_data/site.json` under `url`.
 
 ## Checks
 
